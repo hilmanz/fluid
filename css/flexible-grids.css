@@ -1,0 +1,12 @@
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../js/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(acitcore/navigation/hlist.css);
+
+@import url(acitcore/screen/typography.css);
+@import url(acitcore/screen/screen-FULLPAGE-layout.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(acitcore/print/print.css);

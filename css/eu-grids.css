@@ -1,0 +1,62 @@
+/*
+Theme Name: FLUID WIDTH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+
+@import url(font/bebas/bebas.css);
+@import url(font/pt-sans/pt-sans.css);
+
+html, body {
+	height:100%;
+	max-height:100%;
+	margin:0;
+	padding:0;
+}
+body {
+	background:url(../img/bg.gif) repeat #eaeaea;
+	margin:0;
+	padding:0;
+    font: 16px/27px 'PTSansNarrowRegular', Arial, sans-serif;
+	line-height:1.4;
+	color:#333;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'BebasNeueRegular';
+}
+a{
+	outline:none;
+	color:#C00;
+}
+a:hover{
+	color:#F90;
+}
+.eu-logo{
+	width:300px;
+	height:120px;
+}
+a.logo{
+	background:url(../img/logo.png) no-repeat;
+	width:300px;
+	height:120px;
+	text-indent:-3000px;
+	display:block;
+	text-decoration:none;
+}
+header,nav,footer{
+	background:none;
+}
+.eu-hlist{
+	font-family: 'BebasNeueRegular';
+	background:#990000;
+	-moz-box-shadow:0 2px 2px #ccc;
+	-webkit-box-shadow:0 2px 2px #ccc;
+	box-shadow:0 2px 2px #ccc;
+}
+.container{
+	padding:20px;
+	background:#fff;
+	-moz-box-shadow:0 2px 2px #ccc;
+	-webkit-box-shadow:0 2px 2px #ccc;
+	box-shadow:0 2px 2px #ccc;
+}

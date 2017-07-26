@@ -1,0 +1,44 @@
+/*
+Theme Name: FLUID WIDTH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+
+/* import Font  styles */
+@font-face {
+ font-family: 'BebasNeueRegular';
+ src: url('font/bebasneue-webfont.eot');
+ src: url('font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),  url('font/bebasneue-webfont.woff') format('woff'),  url('font/bebasneue-webfont.ttf') format('truetype'),  url('font/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../js/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(acitcore/navigation/hlist.css);
+@import url(acitcore/forms/gray-theme.css);
+
+@import url(acitcore/screen/typography.css);
+@import url(acitcore/screen/screen-FULLPAGE-layout.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(acitcore/print/print.css);
+
+
+html, body {
+	height:100%;
+	max-height:100%;
+	margin:0;
+	padding:0;
+}
+body {
+	background:#eaeaea;
+	margin:0;
+	padding:0;
+	font-family: 'BebasNeueRegular';
+	line-height:1.4;
+	font-size:16px;
+	color:#333;
+}

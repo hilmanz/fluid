@@ -1,0 +1,421 @@
+/**
+ * "Yet Another Multicolumn Layout" - YAML CSS Framework
+ *
+ * YAML form theme: "gray-theme"
+ *
+ * @copyright			 Copyright 2005-2012, Dirk Jesse
+ * @license				 CC-BY 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                       YAML-CDL (http://www.yaml.de/license.html)
+ * @link                 http://www.yaml.de
+ * @package				 yaml
+ * @version              v4.0
+ * @revision             $Revision: 686 $
+ * @lastmodified         $Date: 2012-01-22 13:09:37 +0100 (So, 22 Jan 2012) $
+ */
+
+@media screen and (min-width: 0px){
+
+	/**
+	* @section general width settings for formular elements in modern browsers
+	*          switching to CSS3 box modell "border-box" for perfect flexible forms
+	*
+	* Styling for: <labels>, <input>, <textarea> and <select>
+	*
+	*/
+
+	.eu-form input,
+	.eu-form input,
+	.eu-form textarea,
+	.eu-form select {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+		width:60%;
+	}
+
+	.eu-columnar label {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.eu-columnar .eu-fbox-select select,
+	.eu-columnar .eu-fbox-text input,
+	.eu-columnar .eu-fbox-text textarea { width:70%; }
+
+	.eu-full .eu-fbox-select select,
+	.eu-full .eu-fbox-text input,
+	.eu-full .eu-fbox-text textarea { width:100%; }
+}
+
+@media screen, projection {
+
+	/**
+	* @section general form styling
+	*
+	* Styling for: <form>, <fieldset>, <legend>, <label> and rows (class="eu-fbox-[xxx]")
+	*
+	*/
+	.eu-form {
+		background:#f4f4f4;
+		border:2px #fff solid;
+		margin: 1.5em 0 0 0;
+		padding: 0;
+		-webkit-box-shadow: 0 0 4px #ddd;
+		-moz-box-shadow: 0 0 4px #ddd;
+		box-shadow: 0 0 4px #ddd;
+	}
+
+	.eu-form fieldset {
+		position:static;
+		background:transparent;
+		margin: 0.75em 0 0.75em 0;
+		padding: 0 0.5em;
+	}
+
+	.eu-form legend {
+		background:transparent;
+		color:#000;
+		font-size:1.2em;
+		line-height:1.25em;
+		font-weight:bold;
+		padding:0 0.5em;
+	}
+
+	.eu-form label {
+		color:#666;
+		line-height: 1.5em;
+	}
+
+	.eu-label {
+		color: #666;
+		padding-top: 0.25em;
+	}
+
+	.eu-form .eu-form div.eu-fbox-check:focus + label {
+		color:#000;
+	}
+
+	/* styling containing DIV elements | Gestaltung der kapselnden DIV-Elemente */
+	.eu-form div.eu-fbox-text,
+	.eu-form div.eu-fbox-select,
+	.eu-form div.eu-fbox-check,
+	.eu-form div.eu-fbox-button {
+		padding: 0.3em 1em;
+		margin-bottom: 0.5em;
+	}
+
+	.eu-form div.eu-fbox-button {
+		background: #ececec;
+		border-top: 1px #e0e0e0 solid;
+		padding:0 1em 1.5em 1em;
+		margin: 0;
+	}
+
+	.eu-form .eu-gbox {
+		padding: 0 0.5em;
+		margin-right: 0;
+	}
+
+	.eu-form h6 {
+		color: #000;
+		margin: 1em 0 0 1em;
+	}
+
+	/**
+	* @section styling form elements
+	*
+	* Styling for: Input, Textarea, Select ...
+	*
+	*/
+
+	/* styling standard form elements with 'almost' equal flexible width */
+	/* Gestaltung der einzelnen Formularelemente mit annähend gleicher Breite */
+	.eu-form .eu-fbox-text input,
+	.eu-form .eu-fbox-text textarea {
+		line-height: 1em;
+		padding: 0.25em 0.3em;
+		margin-top: -2px;
+	}
+
+	.eu-form .eu-fbox-select select {
+		line-height: 1em;
+		padding: 0.25em 2px 0.25em 1px;
+		margin-top: -2px;
+	}
+
+	/* proportional fonts for all form elements */
+	.eu-form input,
+	.eu-form textarea,
+	.eu-form select,
+	.eu-form optgroup {
+		font-family:Arial, Helvetica, sans-serif;
+		-webkit-box-shadow: inset 0 0 4px #eee;
+		-moz-box-shadow: inset 0 0 4px #eee;
+		box-shadow: inset 0 0 4px #eee;
+	}
+
+	.eu-form optgroup {
+		font-style:normal;
+		font-weight:bold;
+	}
+
+	.eu-form .eu-fbox-text input,
+	.eu-form .eu-fbox-text textarea,
+	.eu-form .eu-fbox-select select {
+		border:1px solid #ddd;
+	}
+
+	/* General form styling	| Allgemeine Formatierung des Formulars */
+	.eu-form .eu-message {
+		color:#666;
+		margin-bottom:0.5em;
+	}
+
+	/* Highlight mandatory fields | Pflichtfeldkennzeichnung hervorheben */
+	.eu-form sup {
+		color:#800;
+		font-weight:bold;
+	}
+
+	/* form validation highlight colors */
+	.eu-form input:valid,
+	.eu-form textarea:valid { background-color: #fff; }
+	.eu-form input:invalid,
+	.eu-form textarea:invalid { background-color: #fdd; }
+
+	/**
+	* @section error messages
+	*
+	*/
+
+	.eu-form .eu-error label {
+		color:#800;
+		font-weight:normal;
+	}
+
+	.eu-form .eu-error input,
+	.eu-form .eu-error select,
+	.eu-form .eu-error textarea {
+		border: 1px #800 solid;
+	}
+
+	.eu-form .eu-error input:hover,
+	.eu-form .eu-error input:focus,
+	.eu-form .eu-error select:hover,
+	.eu-form .eu-error select:focus,
+	.eu-form .eu-error textarea:hover,
+	.eu-form .eu-error textarea:focus {
+		border: 1px #800 solid !important;
+	}
+
+	.eu-form .eu-error .eu-message {
+		color:#800;
+	}
+
+	/* :hover and :focus status on form fields | Effekt zur Hervorhebung von Formularfeldern bei :hover oder :focus */
+	.eu-form div.eu-fbox-text input:focus,
+	.eu-form div select:focus,
+	.eu-form div textarea:focus,
+	.eu-form div.eu-fbox-text input:hover,
+	.eu-form div select:hover,
+	.eu-form div textarea:hover,
+	.eu-form div.eu-fbox-text input:active,
+	.eu-form div select:active,
+	.eu-form div textarea:active {
+		border:1px #888 solid;
+		background:#fff;
+	}
+
+	/**
+	* @section Buttons
+	*
+	* inspired from: Catalin Rosu (http://www.red-team-design.com/just-another-awesome-css3-buttons)
+	*/
+
+	.eu-button,
+	.eu-form button,
+	.eu-form input[type="button"],
+	.eu-form input[type="reset"],
+	.eu-form input[type="submit"] {
+		display: inline-block;
+		white-space: nowrap;
+		background-color: #ccc;
+		background-image: -webkit-linear-gradient(top, #eee, #ccc);
+		background-image: -moz-linear-gradient(top, #eee, #ccc);
+		background-image: -ms-linear-gradient(top, #eee, #ccc);
+		background-image: -o-linear-gradient(top, #eee, #ccc);
+		background-image: linear-gradient(top, #eee, #ccc);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+		border: 1px solid #777;
+		-webkit-border-radius: .2em;
+		-moz-border-radius: .2em;
+		border-radius: .2em;
+		-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.15);
+		-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.15);
+		box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.15);
+		color: #333 !important;
+		cursor: pointer;
+		font: normal 1em/2em Arial, Helvetica;
+		margin: 1.5em 0.75em 0 0;
+		padding: 0 1.5em;
+		overflow: visible; /* removes extra side spacing in IE */
+		text-decoration: none !important;
+		text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	}
+
+	.eu-form button:hover,
+	.eu-form input[type="button"]:hover,
+	.eu-form input[type="reset"]:hover,
+	.eu-form input[type="submit"]:hover,
+	.eu-button:hover {
+		background-color: #ddd;
+		background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+		background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+		background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+		background-image: -o-linear-gradient(top, #fafafa, #ddd);
+		background-image: linear-gradient(top, #fafafa, #ddd);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+	}
+
+	.eu-form button:active,
+	.eu-form input[type="button"]:active,
+	.eu-form input[type="reset"]:active,
+	.eu-form input[type="submit"]:active,
+	.eu-button:active {
+		background-color: #bbb;
+		background-image: -webkit-linear-gradient(top, #ccc, #bbb);
+		background-image: -moz-linear-gradient(top, #ccc, #bbb);
+		background-image: -ms-linear-gradient(top, #ccc, #bbb);
+		background-image: -o-linear-gradient(top, #ccc, #bbb);
+		background-image: linear-gradient(top, #ccc, #bbb);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#cccccc', EndColorStr='#bbbbbb');
+		box-shadow: 2px 2px 3px rgba(0,0,0,.2) inset;
+		position: relative;
+		top: 1px;
+	}
+
+	.eu-form button:focus,
+	.eu-form input[type="button"]:focus,
+	.eu-form input[type="reset"]:focus,
+	.eu-form input[type="submit"]:focus,
+	.eu-button:focus {
+		outline: 0;
+		background: #fafafa;
+	}
+
+	/* pseudo elements don't work on input */
+	.eu-form button:before,
+	.eu-button:before {
+		background: #ccc;
+		background: rgba(0,0,0,.1);
+		float: left;
+		width: 1em;
+		text-align: center;
+		font-size: 1.5em;
+		margin: 0 1em 0 -1em;
+		padding: 0 .2em;
+		-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+		-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+		box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+		-moz-border-radius: .15em 0 0 .15em;
+		-webkit-border-radius: .15em 0 0 .15em;
+		border-radius: .15em 0 0 .15em;
+		pointer-events: none;
+	}
+
+	.eu-add:before { content: "\271A"; }
+	.eu-delete:before { content: "\2718"; }
+	.eu-edit:before { content: "\270E"; }
+	.eu-email:before { content: "\2709"; }
+	.eu-like:before { content: "\2764"; }
+	.eu-next:before { content: "\279C"; }
+	.eu-play:before { content: "\25B6"; }
+	.eu-save:before { content: "\2714"; }
+	.eu-spark:before { content: "\2737"; }
+	.eu-star:before { content: "\2605"; }
+
+	/* removes extra inner spacing in Firefox */
+	.eu-form button::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	/* If line-height can't be modified, then fix Firefox spacing with padding */
+	.eu-form input[type=button]::-moz-focus-inner,
+	.eu-form input[type=reset]::-moz-focus-inner,
+	.eu-form input[type=submit]::-moz-focus-inner {
+		padding: .4em;
+	}
+
+	/* The disabled styles */
+	.eu-form button[disabled],
+	.eu-form button[disabled]:hover,
+	.eu-form input[type=button][disabled],
+	.eu-form input[type=button][disabled]:hover,
+	.eu-form input[type=reset][disabled],
+	.eu-form input[type=reset][disabled]:hover,
+	.eu-form input[type=submit][disabled],
+	.eu-form input[type=submit][disabled]:hover,
+	.eu-button.eu-disabled,
+	.eu-button.eu-disabled:hover {
+		background: #eee;
+		color: #aaa !important;
+		border-color: #aaa;
+		cursor: default;
+		text-shadow: none;
+		position: static;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+	/* ie6 support styles - redefined buttons, because of missing support for attribute selectors */
+	* html .eu-button,
+	* html .eu-form button {
+		display: inline-block;
+		white-space: nowrap;
+		background-color: #ccc;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+		border: 1px solid #777;
+		color: #333 !important;
+		cursor: pointer;
+		font: normal 1em/2em Arial, Helvetica;
+		margin: 1.5em 0.75em 0 0;
+		padding: 0 1.5em;
+		overflow: visible; /* removes extra side spacing in IE */
+		text-decoration: none !important;
+	}
+
+	* html .eu-form button:focus,
+	* html .eu-button:focus {
+		outline: 0;
+		background: #fafafa;
+	}
+
+	* html .eu-form button:hover,
+	* html .eu-button:hover {
+		background-color: #ddd;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
+	}
+
+	* html .eu-form button:active,
+	* html .eu-button:active {
+		background-color: #bbb;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#cccccc', EndColorStr='#bbbbbb');
+		position: relative;
+		top: 1px;
+	}
+
+	* html .eu-button.eu-disabled,
+	* html .eu-button.eu-disabled:hover {
+		background: #eee;
+		color: #aaa !important;
+		border-color: #aaa;
+		cursor: default;
+		text-shadow: none;
+		position: static;
+	}
+}
